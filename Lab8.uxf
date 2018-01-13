@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>243</y>
+      <w>279</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>::Board
+--
+-pieces: Piece[][]
+-theBackground: BackGround[][]
+-ROW: int
+-COLUMN: int
+-xPos = 0: int
+-yPos = 0: int
+#IMG_BG_BLACK = "image/black.PNG": String
+#IMG_BG_WHITE = "image/white.PNG": String
+~from_row, from_column, to_row, to_column: int
+--
++Board(int row, int column): ctor
++start(): void
++setFrom(int fc, int fr): void
++setTo(int tc, int tr): void
++move(): void
++paint(Graphics g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>81</y>
+      <w>171</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>/::Piece/
+--
+-name: String
+#color: int
+#type: int
+#row: int
+#column: int
+#image: BufferedImage
+--
++paint(Graphics2D g2): void
++getType(): int
++getColor(): int
++getRow(): int
++getColumn(): int
++getName(): String
++setPos(int x, int y): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>378</y>
+      <w>162</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>/::Definitions/
+--
++IMG_ROOK_BLACK = "image/bR.PNG": String
++IMG_KNIGHT_BLACK = "image/bKn.PNG": String
++IMG_BISHOP_BLACK = "image/bB.PNG": String
++IMG_KING_BLACK = "image/bK.PNG": String
++IMG_QUEEN_BLACK = "image/bQ.PNG": String
++IMG_PAWN_BLACK = "image/bP.PNG": String
++IMG_ROOK_WHITE = "image/wR.PNG": String
++IMG_KNIGHT_WHITE = "image/wKn.PNG": String
++IMG_BISHOP_WHITE = "image/wB.PNG": String
++IMG_KING_WHITE = "image/wK.PNG": String
++IMG_QUEEN_WHITE = "image/wQ.PNG": String
++IMG_PAWN_WHITE = "image/wP.PNG": String
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>81</y>
+      <w>387</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::Bishop
+--
+-name: String
+--
++Bishop(String name, String imageName, int color, int x, int y): ctor
++getType(): int
++getColor(): int
++getName(): String
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>423</x>
+      <y>720</y>
+      <w>279</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::Dummy
+--
+-name: String
+--
++Dummy(String name, int color, int x, int y): ctor
++getType(): int
++getColor(): int
++getName(): String
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>396</y>
+      <w>369</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::King
+--
+-name: String
+--
++King(String name, String imageName, int color, int x, int y): ctor
++getType(): int
++getColor(): int
++getName(): String
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>234</y>
+      <w>387</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::Knight
+--
+-name: String
+--
++Knight(String name, String imageName, int color, int x, int y): ctor
++getType(): int
++getColor(): int
++getName(): String
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>72</y>
+      <w>378</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::Pawn
+--
+-name: String
+--
++Pawn(String name, String imageName, int color, int x, int y): ctor
++getType(): int
++getColor(): int
++getName(): String
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>558</y>
+      <w>378</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::Rook
+--
+-name: String
+--
++Rook(String name, String imageName, int color, int x, int y): ctor
++getType(): int
++getColor(): int
++getName(): String
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>567</y>
+      <w>297</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>::BackGround
+--
+-image: BufferedImage
+-x, y: int
+--
++BackGround(String imageName, int x, int y): ctor
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>594</y>
+      <w>171</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>::ChessRunner
+--
+-FRAME_WIDTH = 600: int
+-FRAME_HEIGHT = 600: int
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1152</x>
+      <y>423</y>
+      <w>216</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>::ChessViewer
+--
+-chessBoard: ChessBoard
+--
++ChessViewer(): ctor
++paintComponent(Graphics h): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1152</x>
+      <y>243</y>
+      <w>216</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>::ChessBoard
+--
+--
++ChessBoard(): ctor
++paintComponent(Graphics g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>162</y>
+      <w>117</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>279</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>324</y>
+      <w>162</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>549</x>
+      <y>324</y>
+      <w>27</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>315</y>
+      <w>126</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>324</y>
+      <w>153</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>144</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>270</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>270</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>720</y>
+      <w>387</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::Queen
+--
+-name: String
+--
++Queen(String name, String imageName, int color, int x, int y): ctor
++getType(): int
++getColor(): int
++getName(): String
++paint(Graphics2D g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>909</x>
+      <y>513</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1251</x>
+      <y>315</y>
+      <w>27</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>513</y>
+      <w>27</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
